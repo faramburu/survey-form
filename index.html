@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Survey Form</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+		crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="py-5 text-center">
+            <h1 id="title">Survey Form</h1>
+            <p id="description" class="lead">Let us know about your experience in league of legends.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <form id="survey-form" class="needs-validation">
+                    <div class="col-md-8 mb-3 mx-auto">
+                        <label for="name" id="name-label">* Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" value=""
+                            required>
+                        <div class="invalid-feedback">
+                            Valid name is required.
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 mb-3 mx-auto">
+                        <label for="email" id="email-label">* Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid email.
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 mb-3 mx-auto">
+                        <label for="number" id="number-label">* Age</label>
+                        <input type="number" class="form-control" id="number" placeholder="Age" min="1" max="125"
+                            required>
+                        <div class="invalid-feedback">
+                            Please enter your age.
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 mb-3 mx-auto">
+                        <label for="role">Main role</label>
+                        <select class="custom-select d-block w-100" id="dropdown" required>
+                            <option value="">Choose...</option>
+                            <option value="top">Top</option>
+                            <option value="jungle">Jungle</option>
+                            <option value="mid">Mid</option>
+                            <option value="carry">Carry</option>
+                            <option value="support">Support</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a valid option.
+                        </div>
+                    </div>
+
+                    <div class="d-block col-md-8 my-3 mx-auto">
+                        <label for="division">What is your current division</label>
+                        <div class="custom-control custom-radio">
+                            <input id="bronce" name="interestsRadio" type="radio" class="custom-control-input" value="1"
+                                required>
+                            <label class="custom-control-label" for="bronce">Bronce</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="silver" name="interestsRadio" type="radio" class="custom-control-input" value="2"
+                                required>
+                            <label class="custom-control-label" for="silver">Silver</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="gold" name="interestsRadio" type="radio" class="custom-control-input" value="3"
+                                required>
+                            <label class="custom-control-label" for="gold">Gold</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="platinum" name="interestsRadio" type="radio" class="custom-control-input"
+                                value="4" required>
+                            <label class="custom-control-label" for="platinum">Platinum</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="diamond" name="interestsRadio" type="radio" class="custom-control-input"
+                                value="5" required>
+                            <label class="custom-control-label" for="diamond">Diamond</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="master" name="interestsRadio" type="radio" class="custom-control-input" value="6"
+                                required>
+                            <label class="custom-control-label" for="master">Master</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="challenger" name="interestsRadio" type="radio" class="custom-control-input"
+                                value="7" required>
+                            <label class="custom-control-label" for="challenger">Challenger</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 mb-3 mx-auto">
+                        <label for="state">What do you like most</label>
+                        <select class="custom-select d-block w-100" id="state" required>
+                            <option value="">Choose...</option>
+                            <option>Characters</option>
+                            <option>Skins</option>
+                            <option>Play with your friends</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please provide a valid option.
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 mb-3 mx-auto">
+                        <label for="">Things that interest you</label>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="liveEvents" value="1">
+                            <label class="custom-control-label" for="liveEvents">Live events</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="liveBroadcasts" value="2">
+                            <label class="custom-control-label" for="liveBroadcasts">Live broadcasts</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="communityEvents" value="3">
+                            <label class="custom-control-label" for="communityEvents">Events for the community</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 mb-3 mx-auto">
+                        <label for="">Any comments or suggestions?</label>
+                        <textarea name="comment" id="comments" cols="47" rows="5"
+                            placeholder="Enter your comment here..."></textarea>
+                    </div>
+
+                    <div class="col-md-8 mb-3 mx-auto">
+                        <button class="btn btn-primary btn-lg btn-block" type="submit" id="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
